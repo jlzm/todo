@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo 记事本</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Asam Todo</h1>
+        <div class="row">
+            <div class="col sidebar">
+                <div class="sidebar-title">分组</div>
+                <hr>
+                <div id="cat-list" class="cat-list"></div>
+                <form action="" id="cat-form" hidden>
+                    <input type="hidden" name="id">
+                    <input type="text" name="title" autocomplete="off">
+                    <button type="submit" class="complete">确认</button>
+                    <button type="button" class="cancel">取消</button>
+                </form>
+                <div id="add-cat">
+                    <button>添加</button>
+                </div>
+            </div>
+            <div class="col main">
+                <form action="" id="task-form" class="row">
+                    <input type="hidden" name="id" >
+                    <input type="checkbox" name="completed" class="col" style="display: none">
+                    <input type="text" id="task-input" name="title"  autocomplete="off">
+                    <select name="cat_id" id="task-select">
+                        <option value=""></option>
+                    </select>
+                    <button type="submit" id="todo-button" >添加</button>
+                </form>
+                <div id="task-list">
+                    <h3>未完成</h3>
+                    <div class="incomplete"></div>
+                    <hr>
+                    <h3>已完成</h3>
+                    <div class="completed"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="dist/build.js"></script>
+</html>
